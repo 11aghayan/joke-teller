@@ -1,0 +1,62 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #45badd;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url('./robot.gif');
+  background-size: contain;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.4rem;
+  color: #fff;
+  padding: .6rem;
+  background: #ff3482;
+  border-radius: .3rem;
+  box-shadow: .14rem .14rem 1.4rem .7rem rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  filter: brightness(95%);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+/* Media Quer: Tablet or smaller*/
+
+@media screen and (max-width: 1000px) {
+  .container {
+    background-position: center center;
+    background-size: cover;
+  }
+
+  button {
+    box-shadow: .3rem .3rem 1.9rem 1.4rem rgba(0, 0, 0, 0.5);
+  }
+}
